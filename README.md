@@ -1,7 +1,6 @@
 # 🎉 Jogo Sorteio do Amigo Secreto
 
 ![Status](https://img.shields.io/badge/status-concluído-brightgreen)
-![Licença](https://img.shields.io/badge/licença-MIT-blue)
 ![Feito com](https://img.shields.io/badge/feito%20com-JavaScript-green)
 ![Deploy](https://img.shields.io/badge/deploy-GitHub%20Pages-purple)
 ![Versão](https://img.shields.io/badge/versão-1.0.0-lightgrey)
