@@ -132,6 +132,7 @@ ul {
     font-family: "Inter", sans-serif;
     font-size: 18px;
     margin: 20px 0;
+    max-width: 620px;
 }
 
 .result-list {
@@ -141,6 +142,32 @@ ul {
     font-weight: bold;
     text-align: center;
 }
+
+/* Estilo para a lista de amigos */
+
+.name-list li {
+    background-color: #f0f4ff;
+    border: 1px solid #c3d0f0;
+    border-radius: 8px;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #333;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    width: auto;
+    display: inline-block;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+/* Efeito ao passar o mouse */
+.name-list li:hover {
+    transform: scale(1.02);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    background-color: #ee9c9c;
+}
+
 
 /* Botão de sortear título */
 .button-draw {
@@ -160,3 +187,4 @@ ul {
 .button-draw:hover {
     background-color: var(--color-button-hover);
 }
+
