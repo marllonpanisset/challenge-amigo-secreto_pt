@@ -1,8 +1,10 @@
 # 🎉 Jogo Sorteio do Amigo Secreto
 
-![Status](https://img.shields.io/badge/status-em%20desenvolvimento-yellow)
-![License](https://img.shields.io/badge/license-MIT-blue)
-![Feito com JavaScript](https://img.shields.io/badge/feito%20com-JavaScript-green)
+![Status](https://img.shields.io/badge/status-concluído-brightgreen)
+![Licença](https://img.shields.io/badge/licença-MIT-blue)
+![Feito com](https://img.shields.io/badge/feito%20com-JavaScript-green)
+![Deploy](https://img.shields.io/badge/deploy-GitHub%20Pages-purple)
+![Versão](https://img.shields.io/badge/versão-1.0.0-lightgrey)
 
 ---
 
@@ -29,7 +31,7 @@ O usuário pode adicionar nomes à lista, visualizar os amigos adicionados, remo
 
 ## 🚧 Status do Projeto
 
-> ✅ Projeto finalizado
+> ✅ Projeto concluído
 
 ---
 
@@ -47,7 +49,7 @@ O usuário pode adicionar nomes à lista, visualizar os amigos adicionados, remo
 
 ## 🔗 Acesso ao Projeto
 
-Você pode acessar o projeto diretamente [clicando aqui](https://seuprojeto.com) ou clonando o repositório:
+Você pode acessar o projeto diretamente [clicando aqui](https://marllonpanisset.github.io/challenge-amigo-secreto_pt) ou clonando o repositório:
 
 ```bash
 git clone https://github.com/marllonpanisset/challenge-amigo-secreto_pt.git
