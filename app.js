@@ -1,35 +1,62 @@
 let listaNomesAmigos = [];
 let nomeAmigoInput = document.getElementById("amigo");
+let estadoSorteio = false;
 
 function adicionarAmigo() {
-    // Captura o valor do campo de entrada
     let nomeEntrada = nomeAmigoInput.value.trim();
 
-    // Valida a entrada
     if (nomeEntrada === "") {
         alert("Por favor, insira um nome.");
         return;
     }
 
-    // Atualiza o array de amigos
+    // Se o sorteio já aconteceu, resetar o estado
+    if (estadoSorteio) {
+        document.getElementById("resultado").innerHTML = "";
+        estadoSorteio = false;
+    }
+
     listaNomesAmigos.push(nomeEntrada);
-
-    // Limpa o campo de entrada
     nomeAmigoInput.value = "";
-
-    // Atualiza a lista na tela
     exibirListaDeAmigos();
 }
 
 function exibirListaDeAmigos() {
-    // Obter o elemento da lista
     let lista = document.getElementById("listaAmigos");
-
-    // Limpar a lista existente
     lista.innerHTML = "";
 
-    // Percorrer o array e adicionar cada nome como <li>
-    for (let i = 0; i < listaNomesAmigos.length; i++) {
-        lista.innerHTML += `<li>${listaNomesAmigos[i]}</li>`;
+    listaNomesAmigos.forEach((nome, index) => {
+        let li = document.createElement("li");
+        li.textContent = nome;
+        li.classList.add("amigo-item");
+
+        li.addEventListener("click", () => {
+            removerAmigo(index);
+        });
+
+        lista.appendChild(li);
+    });
+}
+
+function removerAmigo(indice) {
+    listaNomesAmigos.splice(indice, 1);
+    exibirListaDeAmigos();
+}
+
+function sortearAmigo() {
+    if (listaNomesAmigos.length === 0) {
+        alert("A lista de amigos está vazia. Adicione pelo menos um nome antes de sortear.");
+        return;
     }
+
+    let indiceSorteado = Math.floor(Math.random() * listaNomesAmigos.length);
+    let nomeSorteado = listaNomesAmigos[indiceSorteado];
+
+    let resultado = document.getElementById("resultado");
+    resultado.innerHTML = `<li>🎉 O amigo sorteado foi: <strong>${nomeSorteado}</strong></li>`;
+
+    // Resetar o jogo
+    listaNomesAmigos = [];
+    exibirListaDeAmigos();
+    estadoSorteio = true;
 }
